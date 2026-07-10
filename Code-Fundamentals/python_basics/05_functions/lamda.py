@@ -70,3 +70,6 @@ print([f(10) for f in funcs])   # [20, 20, 20] -- correct, expected, no surprise
 message = "hello"
 funcs = [lambda: message for i in range(3)]
 print([f() for f in funcs])   # ['hello', 'hello', 'hello'] -- correct too!
+
+funcs = [lambda: i for i in range(3)]   # i is borrowed, and i keeps changing (0->1->2) as the loop runs
+print([f() for f in funcs])              # [2, 2, 2] -- WRONG, this is the trap
