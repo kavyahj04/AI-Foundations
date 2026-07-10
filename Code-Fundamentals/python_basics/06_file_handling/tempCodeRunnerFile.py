@@ -1,0 +1,1 @@
+print(repr(open('demo2.txt').read()))
