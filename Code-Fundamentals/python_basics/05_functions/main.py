@@ -79,13 +79,18 @@ total(*nums)
 # Edge case 3 — the name args is just convention, not special:
 
 
-# Edge case 4 — keyword arguments do NOT go into *args
+# Edge case 4 — anything after *args becomes keyword-only, so it MUST be passed by keyword
 def show(*args, name):
     print(args)
     print(name)
 
 show(1, 2, name="Kavya")
-# TypeError: show() got an unexpected keyword argument 'name'
+# (1, 2)
+# Kavya
+
+show(1, 2, "Kavya")
+# TypeError: show() missing 1 required keyword-only argument: 'name'
+# ("Kavya" gets absorbed into args instead of filling name)
 
 # kwargs 
 
