@@ -58,7 +58,7 @@ describe('a', 'b', 'c', 'd')
 describe('a')
 # first: a | rest: ()   <- only one value given, rest is just empty
 
-def describe2(first, *rest):
+def describe2(first, *rest):  # rest = ([1, 2],)
     print('first:', first, '| rest:', rest)
     print([n * n for n in rest[0]]) 
     

@@ -95,3 +95,8 @@ dict.fromkeys(tokens, 0)     # {'cat': 0, 'dog': 0, 'bird': 0}   <- every key ge
 # x in d (keys) → O(1) average — same as set
 # x in s → O(1) average
 # x in d.values() → O(n) — same as list
+
+tokens= [112,113,114]
+print(list(dict.fromkeys(tokens))) # [112, 113, 114]
+print(dict.fromkeys(tokens))     # {'cat': None, 'dog': None, 'bird': None}
+dict.fromkeys(tokens, 0)     # {'

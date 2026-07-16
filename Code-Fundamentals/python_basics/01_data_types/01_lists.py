@@ -27,7 +27,7 @@ nums[::2]    # [0, 2, 4, 6, 8]                   — every 2nd element
 nums[::3]    # [0, 3, 6, 9]                       — every 3rd element
 nums[::-1]   # [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]     — every element, backward = full reverse
 nums[::-2]   # [9, 7, 5, 3, 1]                     — every 2nd element, backward
-nums[::0]    # ValueError: slice step cannot be zero
+# nums[::0]    # ValueError: slice step cannot be zero
 
 # Update
 
@@ -76,3 +76,8 @@ safe_copy = original.copy()
 safe_copy.append(999)
 print(original)             # [1, 2, 3, 4]  <- unaffected this time
 print(safe_copy)             # [1, 2, 3, 4, 999]
+
+
+nums = [1,2,3,4,5,6,7,8,9,10,11]
+
+print(nums[::10])
